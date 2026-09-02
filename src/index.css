@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #f7f9fb;
+    color: #191c1e;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.font-plus-jakarta {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.52);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 10px 36px rgba(0, 50, 60, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.glass-panel-alert {
+  background: rgba(255, 218, 214, 0.28);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(186, 26, 26, 0.22);
+  box-shadow: 0 10px 36px rgba(186, 26, 26, 0.06);
+}
+
+.glass-panel-teal {
+  background: rgba(98, 250, 227, 0.08);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(60, 221, 199, 0.25);
+  box-shadow: 0 10px 36px rgba(0, 107, 95, 0.05);
+}
+
+.glass-border-rim {
+  border-top: 1px solid rgba(255, 255, 255, 0.95);
+  border-left: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.text-glow {
+  text-shadow: 0 0 24px rgba(224, 242, 254, 0.9), 0 0 48px rgba(98, 250, 227, 0.2);
+}
+
+/* Custom glowing pulse and animations */
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-subtle-float {
+  animation: subtle-float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes subtle-drift {
+  0% {
+    transform: scale(1.05) translate(0px, 0px);
+  }
+  50% {
+    transform: scale(1.09) translate(-14px, -6px);
+  }
+  100% {
+    transform: scale(1.05) translate(0px, 0px);
+  }
+}
+
+.animate-subtle-drift {
+  animation: subtle-drift 32s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}

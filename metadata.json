@@ -1,0 +1,6 @@
+{
+  "name": "FORECAST-BUST",
+  "description": "Precision Atmospheric Intelligence — Advanced meteorological analysis engine comparing predictive models against ground-truth reality to detect precision anomalies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
